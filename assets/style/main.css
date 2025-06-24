@@ -46,12 +46,11 @@
     --background-color: #FFFFFF;
     --text-color: #191919;
     --dark-color: #f3f3f3;
-}
-
-body {
-    font-family: var(--font-family-regular);
-    background-color: var(--background-color);
-    color: var(--text-color);
+    --link-color: #D1F4E1;
+    --highlight-color: #FCEEB5;
+    --highlight-color-2: #B5E0F3;
+    --highlight-color-3: #F8C8DC;
+    --highlight-color-4: #F8C8DC;
 }
 
 * {
@@ -112,6 +111,9 @@ a {
 }
 
 #app {
+    font-family: var(--font-family-regular);
+    background-color: var(--background-color);
+    color: var(--text-color);
     padding: var(--top) var(--side);
 }
 
