@@ -1,0 +1,206 @@
+@font-face { font-family: 'Inter-Regular'; src: url('../fonts/Inter_28pt-Regular.ttf'); }
+@font-face { font-family: 'Inter-Bold'; src: url('../fonts/Inter_28pt-Bold.ttf'); }
+@font-face { font-family: 'Inter-SemiBold'; src: url('../fonts/Inter_28pt-SemiBold.ttf'); }
+@font-face { font-family: 'Inter-Light'; src: url('../fonts/Inter_28pt-Light.ttf'); }
+
+:root {
+    /* colors  */
+    --background-color: #191919;
+    --text-color: #FFFFFF;
+    --link-color: #D1F4E1;
+    --highlight-color: #FCEEB5;
+    --highlight-color-2: #B5E0F3;
+    --highlight-color-3: #F8C8DC;
+    --highlight-color-4: #F8C8DC;
+    --dark-color: rgba(255, 255, 255, 0.05);
+
+    /* fonts */
+    --font-family-regular: 'Inter-Regular';
+    --font-family-bold: 'Inter-Bold';
+    --font-family-semi-bold: 'Inter-SemiBold';
+    --font-family-light: 'Inter-Light';
+
+    /* font size */
+    --title-big: 128px;
+    --title-medium: 82px;
+    --title-small: 67px;
+
+    --subtitle-big: 64px;
+    --subtitle-medium: 48px;
+    --subtitle-small: 36px;
+
+    --text-big: 32px;
+    --text-medium: 24px;
+    --text-small: 21px;
+
+    --border-radius: 20px;
+
+    /* spacing */
+    --side: 200px;
+    --top: 200px;
+    --section: 99px;
+    --title-margin: 50px;
+}
+
+.light-theme {
+    --background-color: #FFFFFF;
+    --text-color: #191919;
+    --dark-color: #f3f3f3;
+}
+
+body {
+    font-family: var(--font-family-regular);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-family-bold);
+}
+
+h4, h5, h6 {
+    font-family: var(--font-family-semi-bold);
+}
+
+h1 {
+    font-size: var(--title-big);
+}
+
+h2 {
+    font-size: var(--title-medium);
+}
+
+h3 {
+    font-size: var(--title-small);
+}
+
+h4 {
+    font-size: var(--subtitle-big);
+}
+
+h5 {
+    font-size: var(--subtitle-medium);
+}
+
+h6 {
+    font-size: var(--subtitle-small);
+}
+
+a, span {
+    font-family: var(--font-family-light);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.link {
+    color: var(--link-color);
+}
+
+.container {
+    margin-bottom: var(--section);
+}
+
+.container:last-child {
+    margin-bottom: 0;
+}
+
+#app {
+    padding: var(--top) var(--side);
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul, li {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* media  */
+@media (max-width: 1910px) {
+    :root {
+        --title-big: 100px;
+        --title-medium: 64px;
+        --title-small: 52px;
+        
+        --subtitle-big: 52px;
+        --subtitle-medium: 40px;
+        --subtitle-small: 32px;
+
+        --text-big: 28px;
+        --text-medium: 20px;
+        --text-small: 18px;
+
+        --side: 100px;
+        --top: 100px;
+        --section: 60px;
+    }
+}
+
+@media (max-width: 1366px) {
+    :root {
+        --title-big: 80px;
+        --title-medium: 60px;
+        --title-small: 50px;
+        
+        --subtitle-big: 48px;
+        --subtitle-medium: 32px;
+        --subtitle-small: 28px;
+
+        --text-big: 24px;
+        --text-medium: 18px;
+        --text-small: 16px;
+
+        --title-margin: 30px;
+    }
+}
+
+@media (max-width: 1280px) {
+    :root {
+        --side: 80px;
+        --top: 80px;
+        --section: 40px;
+        --title-margin: 20px;
+    }
+}
