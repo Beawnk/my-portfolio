@@ -1,19 +1,19 @@
 <template>
   <section id="introduction" class="container">
-    <div class="grid anim-1">
-        <div class="media-kit item">
+    <div class="grid">
+        <div class="media-kit item anim-1">
             <h3>Bianca Sineleck</h3>
             <h1>Portfólio</h1>
             <p>Desenvolvedora Front-end com experiência na criação de interfaces modernas, responsivas e focadas na usabilidade.</p>
         </div>
-        <div class="picture item">
+        <div class="picture item anim-2">
             <img src="/assets/images/perfil.jpg" alt="photo">
         </div>
-        <div class="emote item">
+        <div class="emote item anim-3">
             <img src="/assets/images/icons/waving-hand.png" alt="Waving hand">
         </div>
-        <div class="color-1 item"></div>
-        <div class="color-2 item"></div>
+        <div class="color-1 item anim-4"></div>
+        <div class="color-2 item anim-5"></div>
     </div>
   </section>
 </template>
@@ -33,7 +33,7 @@
     top: var(--top);
     left: calc(var(--side) / -2);
     border-radius: var(--border-radius);
-    background-color: var(--highlight-color-4);
+    background-color: var(--highlight-color-3);
 }
 
 .grid {
@@ -58,7 +58,7 @@
             padding: 50px;
         }
         h3 {
-            color: var(--highlight-color-4);
+            color: var(--highlight-color-3);
             margin-bottom: 60px;
         }
         h1 {

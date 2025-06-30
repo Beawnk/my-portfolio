@@ -11,7 +11,8 @@
     --highlight-color: #FCEEB5;
     --highlight-color-2: #B5E0F3;
     --highlight-color-3: #F8C8DC;
-    --highlight-color-4: #F8C8DC;
+    --highlight-color-4: #D1F4E1;
+    --highlight-color-5: #E6DAF7;
     --dark-color: rgba(255, 255, 255, 0.05);
 
     /* fonts */
@@ -30,16 +31,18 @@
     --subtitle-small: 36px;
 
     --text-big: 32px;
-    --text-medium: 24px;
-    --text-small: 21px;
+    --text-medium: 22px;
+    --text-small: 16px;
 
     --border-radius: 20px;
 
     /* spacing */
     --side: 200px;
-    --top: 200px;
+    --top: 150px;
     --section: 99px;
     --title-margin: 50px;
+
+    --transition: all 0.3s ease-in-out;
 }
 
 .light-theme {
@@ -115,6 +118,8 @@ a {
     background-color: var(--background-color);
     color: var(--text-color);
     padding: var(--top) var(--side);
+    position: relative;
+    min-height: 100vh;
 }
 
 html, body, div, span, applet, object, iframe,

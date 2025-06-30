@@ -41,14 +41,11 @@
   }
 }
 
-.anim-1 {
-  opacity: 0;
-  @include animation('appear ease 0.8s forwards');
-}
-
-.anim-2 {
-  opacity: 0;
-  @include animation('appear ease 0.8s forwards');
-  animation-delay: 0.5s;
+@for $i from 1 through 5 {
+  .anim-#{$i} {
+    opacity: 0;
+    @include animation('appear ease 0.8s forwards');
+    animation-delay: (0.2s * ($i - 1));
+  }
 }
   
