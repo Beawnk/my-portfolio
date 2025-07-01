@@ -1,25 +1,25 @@
 <template>
   <section id="introduction" class="container">
     <div class="grid">
-        <div class="media-kit item anim-1">
+        <div class="media-kit item fade-in-on-scroll" style="--animation-delay: 0.1s;">
             <h3>Bianca Sineleck</h3>
             <h1>Portfólio</h1>
             <p>Desenvolvedora Front-end com experiência na criação de interfaces modernas, responsivas e focadas na usabilidade.</p>
         </div>
-        <div class="picture item anim-2">
+        <div class="picture item fade-in-on-scroll" style="--animation-delay: 0.3s;">
             <img src="/assets/images/perfil.jpg" alt="photo">
         </div>
-        <div class="emote item anim-3">
+        <div class="emote item fade-in-on-scroll" style="--animation-delay: 0.5s;">
             <img src="/assets/images/icons/waving-hand.png" alt="Waving hand">
         </div>
-        <div class="color-1 item anim-4"></div>
-        <div class="color-2 item anim-5"></div>
+        <div class="color-1 item fade-in-on-scroll" style="--animation-delay: 0.7s;"></div>
+        <div class="color-2 item fade-in-on-scroll" style="--animation-delay: 0.9s;"></div>
     </div>
   </section>
 </template>
 
 <script setup>
-
+useAnimateOnScroll('.fade-in-on-scroll');
 </script>
 
 <style lang="scss" scoped>

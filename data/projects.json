@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Byte shop",
+    "description": "Um projeto de site de venda de itens tecnológicos com o objetivo de aprimorar minhas habilidades em Vue.js. O projeto conta com funcionalidades completas de listagem e gerenciamento de produtos, criação de conta e edição de dados de usuário, utilizando o Supabase como backend para autenticação, banco de dados e integração em tempo real.",
+    "tech": "Vue.js, SASS, Supabase",
+    "imageUrl": "/images/projects/byte-shop.png",
+    "projectUrl": "https://byte-shop-phi.vercel.app/",
+    "className": "one type-3"
+  },
+  {
+    "id": 2,
+    "title": "High Tech",
+    "description": "Meu primeiro projeto feito com Vue.js, uma loja simples com sistema de listagem de produtos e carrinho.",
+    "tech": "Vue.js",
+    "imageUrl": "/images/projects/high-tech.png",
+    "projectUrl": "https://high-tech-project.vercel.app/",
+    "className": "three type-1"
+  },
+  {
+    "id": 3,
+    "title": "Slide show",
+    "description": "Um carrossel de imagens responsivo desenvolvido com JavaScript puro.",
+    "tech": "HTML, CSS, JavaScript",
+    "imageUrl": "/images/projects/slider.png",
+    "projectUrl": "https://slider-project-six.vercel.app/",
+    "className": "four type-1"
+  },
+  {
+    "id": 4,
+    "title": "Dragon Repeller Game",
+    "description": "Um jogo de RPG simples e curto, desenvolvido com JavaScript puro, que inclui um sistema de batalha, inventário e escolhas.",
+    "tech": "JavaScript, CSS",
+    "imageUrl": "/images/projects/dragon-game.png",
+    "projectUrl": "https://dragon-repeller-game.vercel.app/",
+    "className": "two type-1"
+  },
+  {
+    "id": 5,
+    "title": "Coded Up",
+    "description": "Uma plataforma de cursos online sobre desenvolvimento full-stack e design UX/UI. Feito com Vue.js.",
+    "tech": "Vue.js",
+    "imageUrl": "/images/projects/coded-up.png",
+    "projectUrl": "https://coded-up.vercel.app/",
+    "className": "five type-2"
+  },
+  {
+    "id": 6,
+    "title": "IEmergency App",
+    "description": "Um web app de segurança pública feito para meu Trabalho de Conclusão de Curso (TCC). A plataforma permite que usuários façam denúncias geolocalizadas...",
+    "tech": "Vue.js, SASS, Supabase",
+    "imageUrl": "/images/projects/webapp.png",
+    "projectUrl": "https://iemergency-webapp-py29.vercel.app/",
+    "className": "six type-4"
+  }
+]

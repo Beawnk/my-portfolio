@@ -1,67 +1,25 @@
 <template>
   <section id="projects" class="container">
-    <div class="anim-1">
+    <div class="fade-in-on-scroll" style="--animation-delay: 0.1s;">
         <h3>Projetos</h3>
     </div>
-    <div class="anim-2 projects-grid">
-        <a class="project-card one type-3" href="">
+
+    <div class="projects-grid">
+        <a v-for="(project, index) in projects"
+           :key="project.id"
+           :href="project.projectUrl"
+           target="_blank"
+           class="project-card fade-in-on-scroll"
+           :class="project.className"
+           :style="{ '--animation-delay': (index * 0.15 + 0.2) + 's' }">
+
             <div class="project-image">
-                <img src="/assets/images/projects/byte-shop.png" alt="Project 1">
+                <img :src="project.imageUrl" :alt="project.title">
             </div>
             <div class="project-info">
-                <h4>Byte shop</h4>
-                <p>Um projeto de site de venda de itens tecnológicos com o objetivo de aprimorar minhas habilidades em Vue.js. O projeto conta com funcionalidades completas de listagem e gerenciamento de produtos, criação de conta e edição de dados de usuário, utilizando o Supabase como backend para autenticação, banco de dados e integração em tempo real.</p>
-                <p class="tech">Vue.js, SASS, Supabase</p>
-            </div>
-        </a>
-        <a class="project-card two type-1" href="">
-            <div class="project-image">
-                <img src="/assets/images/projects/dragon-game.png" alt="Project 2">
-            </div>
-            <div class="project-info">
-                <h4>Dragon Repeller Game</h4>
-                <p>Um jogo de RPG simples e curto, desenvolvido com JavaScript puro, que inclui um sistema de batalha, inventário e escolhas.</p>
-                <p class="tech">JavaScript, CSS</p>
-            </div>
-        </a>
-        <a class="project-card three type-1" href="">
-            <div class="project-image">
-                <img src="/assets/images/projects/high-tech.png" alt="Project 3">
-            </div>
-            <div class="project-info">
-                <h4>High Tech</h4>
-                <p>Meu primeiro projeto feito com Vue.js, uma loja simples com sistema de listagem de produtos e carrinho.</p>
-                <p class="tech">Vue.js</p>
-            </div>
-        </a>
-        <a class="project-card four type-1" href="">
-            <div class="project-image">
-                <img src="/assets/images/projects/slider.png" alt="Project 4">
-            </div>
-            <div class="project-info">
-                <h4>Slide show</h4>
-                <p>Um carrossel de imagens responsivo desenvolvido com JavaScript puro.</p>
-                <p class="tech">HTML, CSS, JavaScript</p>
-            </div>
-        </a>
-        <a class="project-card five type-2" href="">
-            <div class="project-image">
-                <img src="/assets/images/projects/coded-up.png" alt="Project 4">
-            </div>
-            <div class="project-info">
-                <h4>Coded Up</h4>
-                <p>Uma plataforma de cursos online sobre desenvolvimento full-stack e design UX/UI. Feito com Vue.js.</p>
-                <p class="tech">Vue.js</p>
-            </div>
-        </a>
-        <a class="project-card six type-4" href="">
-            <div class="project-image">
-                <img src="/assets/images/projects/webapp.png" alt="Project 4">
-            </div>
-            <div class="project-info">
-                <h4>IEmergency App</h4>
-                <p>Um web app de segurança pública feito para meu Trabalho de Conclusão de Curso (TCC). A plataforma permite que usuários façam denúncias geolocalizadas de ocorrências como violência doméstica, acidentes e incêndios, encaminhando as informações para as autoridades competentes. O aplicativo também notifica outros usuários próximos ao local do incidente, criando uma rede de alerta comunitário. Um botão de emergência envia a localização e uma mensagem opcional para a polícia ou contatos de emergência. O projeto foi construído com Vue.js, SASS para estilização e Supabase para autenticação e gerenciamento de banco de dados.</p>
-                <p class="tech">Vue.js, SASS, Supabase</p>
+                <h4>{{ project.title }}</h4>
+                <p>{{ project.description }}</p>
+                <p class="tech">{{ project.tech }}</p>
             </div>
         </a>
     </div>
@@ -69,13 +27,34 @@
 </template>
 
 <script setup>
+import projectsData from '@/data/projects.json';
+const projects = ref(projectsData);
 
+useAnimateOnScroll('.fade-in-on-scroll');
 </script>
 
 <style lang="scss" scoped>
 @use '@/assets/style/main.scss' as v;
 
-$tech-colors: var(--highlight-color), var(--highlight-color-2), var(--highlight-color-3), var(--link-color), var(--highlight-color), var(--highlight-color-2);
+.fade-in-on-scroll.project-card {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.6s ease-out, 
+              transform 0.6s ease-out, 
+              background-color 0.3s ease;
+              
+  transition-delay: var(--animation-delay, 0s);
+}
+
+.fade-in-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-on-scroll.has-animated {
+  transition-delay: 0s !important;
+}
+
 
 #projects {
     
@@ -97,10 +76,13 @@ $tech-colors: var(--highlight-color), var(--highlight-color-2), var(--highlight-
             overflow: hidden;
             background-color: var(--dark-color);
             color: var(--light-color);
-            transition: transform 0.3s ease;
 
             &:hover {
-                transform: scale(1.05);
+                transform: scale(1.03);
+
+                h4, p, .tech {
+                    color: var(--background-color) !important;
+                }
             }
             
             .project-image img {
@@ -113,11 +95,7 @@ $tech-colors: var(--highlight-color), var(--highlight-color-2), var(--highlight-
                 font-size: var(--text-small);
                 font-family: var(--font-family-bold);
                 margin-bottom: 0;
-            }
-            @for $i from 1 through length($tech-colors) {
-              &:nth-child(#{$i}) .tech {
-                color: nth($tech-colors, $i);
-              }
+                transition: var(--transition);
             }
 
             .project-info {
@@ -125,11 +103,13 @@ $tech-colors: var(--highlight-color), var(--highlight-color-2), var(--highlight-
                 h4 {
                     font-size: var(--text-medium);
                     margin-bottom: 10px;
+                    transition: var(--transition);
                 }
                 p {
                     font-size: var(--text-small);
                     margin-bottom: 15px;
                     line-height: normal;
+                    transition: var(--transition);
                 }
             }
 
@@ -169,26 +149,74 @@ $tech-colors: var(--highlight-color), var(--highlight-color-2), var(--highlight-
 
             &.one {
                 grid-area: 1 / 1 / 4 / 3;
+
+                .tech {
+                    color: var(--highlight-color-4);
+                }
+
+                &:hover {
+                    background-color: var(--highlight-color-4);
+                }
             }
 
             &.two {
                 grid-area: 4 / 1 / 5 / 3;
+
+                .tech {
+                    color: var(--highlight-color);
+                }
+
+                &:hover {
+                    background-color: var(--highlight-color);
+                }
             }
 
             &.three {
                 grid-area: 1 / 3 / 2 / 5;
+
+                .tech {
+                    color: var(--highlight-color-2);
+                }
+
+                &:hover {
+                    background-color: var(--highlight-color-2);
+                }
             }
 
             &.four {
                 grid-area: 2 / 3 / 3 / 5;
+
+                .tech {
+                    color: var(--highlight-color-3);
+                }
+
+                &:hover {
+                    background-color: var(--highlight-color-3);
+                }
             }
 
             &.five {
                 grid-area: 3 / 3 / 5 / 5;
+
+                .tech {
+                    color: var(--highlight-color);
+                }
+
+                &:hover {
+                    background-color: var(--highlight-color);
+                }
             }
 
             &.six {
                 grid-area: 1 / 5 / 5 / 7;
+
+                .tech {
+                    color: var(--highlight-color-5);
+                }
+
+                &:hover {
+                    background-color: var(--highlight-color-5);
+                }
             }
         }
     }
