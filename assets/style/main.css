@@ -92,7 +92,7 @@ h6 {
     font-size: var(--subtitle-small);
 }
 
-a, span {
+a, span, p {
     font-family: var(--font-family-light);
 }
 
