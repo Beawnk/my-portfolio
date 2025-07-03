@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Vue.js",
+        "image": "/images/tech/vue.png"
+    },
+    {
+        "id": 2,
+        "title": "JavaScript",
+        "image": "/images/tech/javascript.svg"
+    },
+    {
+        "id": 3,
+        "title": "HTML5",
+        "image": "/images/tech/html.svg"
+    },
+    {
+        "id": 4,
+        "title": "CSS3",
+        "image": "/images/tech/css.svg"
+    },
+    {
+        "id": 5,
+        "title": "SASS",
+        "image": "/images/tech/sass.png"
+    },
+    {
+        "id": 6,
+        "title": "Nuxt.js",
+        "image": "/images/tech/nuxt.svg"
+    }
+]

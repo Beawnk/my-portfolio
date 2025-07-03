@@ -34,8 +34,6 @@ useAnimateOnScroll('.fade-in-on-scroll');
 </script>
 
 <style lang="scss" scoped>
-@use '@/assets/style/main.scss' as v;
-
 .fade-in-on-scroll.project-card {
   opacity: 0;
   transform: translateX(20px);
