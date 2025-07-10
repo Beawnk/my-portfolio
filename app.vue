@@ -28,4 +28,16 @@
 .fade-in-on-scroll.has-animated {
   transition-delay: 0s !important;
 }
+
+.btn {
+  padding: 20px;
+  border-radius: var(--border-radius);
+  background-color: var(--highlight-color);
+  color: var(--background-color);
+  font-size: var(--text-small);
+  font-family: var(--font-family-semi-bold);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
 </style>

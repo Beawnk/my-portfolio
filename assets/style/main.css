@@ -33,6 +33,7 @@
     --text-big: 32px;
     --text-medium: 22px;
     --text-small: 16px;
+    --text-tiny: 14px;
 
     --border-radius: 20px;
 
@@ -99,6 +100,15 @@ a, span, p {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px #252525 inset !important; /* Ou a cor de fundo desejada */
+    -webkit-text-fill-color: var(--text-color) !important; /* Define a cor do texto, se necessário */
+    background-color: transparent !important; /* Garante que o background padrão seja branco */
 }
 
 .link {

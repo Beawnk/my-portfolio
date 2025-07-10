@@ -27,17 +27,22 @@
             </div>
         </div>
         <div class="contact-form card fade-in-on-scroll" style="--animation-delay: 0.4s;">
-            <form action="https://formspree.io/f/xjvowzqk" method="POST">
-                <label for="name">Nome</label>
-                <input type="text" id="name" name="name" required placeholder="Seu nome">
-                
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="_replyto" required placeholder="Seu e-mail">
-                
-                <label for="message">Mensagem</label>
-                <textarea id="message" name="message" rows="4" required placeholder="Sua mensagem"></textarea>
-                
-                <button type="submit">Enviar</button>
+            <form action="https://formspree.io/f/manjrjqd" method="POST">
+                <div class="input-group">
+                    <input type="text" id="name" name="name" required placeholder=" ">
+                    <label for="name">Nome</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" name="_replyto" required placeholder=" ">
+                    <label for="email">E-mail</label>
+                </div>
+                <div class="input-group">
+                    <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                    <label for="message">Mensagem</label>
+                </div>
+                <div class="btn-flex">
+                    <button type="submit" class="btn">Enviar</button>
+                </div>
             </form>
         </div>
     </div>
@@ -65,7 +70,7 @@ useAnimateOnScroll('.fade-in-on-scroll');
 
         .card {
             background-color: var(--dark-color);
-            padding: 30px;
+            padding: 50px;
             border-radius: var(--border-radius);
         }
 
@@ -120,6 +125,105 @@ useAnimateOnScroll('.fade-in-on-scroll');
         .contact-form {
             grid-column: span 3 / span 3;
             grid-row: span 6 / span 6;
+
+            form {
+
+                .input-group {
+                    position: relative;
+                    height: 48px;
+                    margin-bottom: 30px;
+
+                    &:has(textarea) {
+                        height: 150px;
+
+                        label {
+                            color: var(--highlight-color);
+                        }
+                    }
+
+                    &:first-child input {
+                        border-color: var(--highlight-color-3);
+
+                        &+ label {
+                            color: var(--highlight-color-3);
+                        }
+                    }
+
+                    &:nth-child(2) input {
+                        border-color: var(--highlight-color-2);
+
+                        &+ label {
+                            color: var(--highlight-color-2);
+                        }
+                    }
+
+                    input, textarea {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        padding: 15px;
+                        border: 1px solid var(--highlight-color-5);
+                        border-radius: 15px;
+                        background-color: transparent;
+                        color: var(--text-color);
+                        font-size: var(--text-small);
+                        outline: none;
+                        transition: var(--transition);
+                        font-family: var(--font-family-regular);
+
+                        &:focus + label {
+                            top: -13px;
+                            left: 5px;
+                            font-size: var(--text-tiny);
+                        }
+
+                        &:not(:placeholder-shown) &:not(:focus) + label {
+                            top: -13px;
+                            left: 5px;
+                        }
+
+                        &:not(:placeholder-shown) + label {
+                            top: -13px;
+                            left: 5px;
+                        } 
+                    }
+
+                    textarea {
+                        resize: none;
+                        min-height: 150px;
+                        border-color: var(--highlight-color);
+                    }
+
+                    label {
+                        position: absolute;
+                        left: 10px;
+                        top: 10px;
+                        background-color: #252525;
+                        color: var(--highlight-color-5);
+                        font-size: var(--text-small);
+                        transition: var(--transition);
+                        padding: 5px;
+                    }
+                }
+
+                .btn-flex {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .btn {
+                        width: 50%;
+                        background-color: var(--highlight-color-5);
+
+                        &:hover {
+                            background-color: var(--highlight-color-4);
+                        }
+                    }
+                }
+            }
         }
     }
 }
