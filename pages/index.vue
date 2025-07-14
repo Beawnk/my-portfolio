@@ -41,6 +41,9 @@ useAnimateOnScroll('.fade-in-on-scroll');
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     gap: 25px;
+    @include v.media('1050px') {
+        gap: 20px;
+    }
     .item {
         border-radius: var(--border-radius);
         overflow: hidden;
@@ -57,12 +60,25 @@ useAnimateOnScroll('.fade-in-on-scroll');
         @include v.media('1366px') {
             padding: 50px;
         }
+        @include v.media('1050px') {
+            grid-column: span 6 / span 6;
+            grid-row: span 3 / span 3;
+            grid-row-start: 1;
+        }
         h3 {
             color: var(--highlight-color-3);
             margin-bottom: 60px;
+
+            @include v.media('700px') {
+                margin-bottom: 30px;
+            }
         }
         h1 {
             margin-bottom: 70px;
+
+            @include v.media('700px') {
+                margin-bottom: 30px;
+            }
         }
         p {
             font-size: var(--text-big);
@@ -73,6 +89,12 @@ useAnimateOnScroll('.fade-in-on-scroll');
         grid-column: span 2 / span 2;
         grid-row: span 4 / span 4;
         grid-column-start: 4;
+        @include v.media('1050px') {
+            grid-column: span 4 / span 4;
+            grid-row: span 2 / span 2;
+            grid-column-start: 1;
+            grid-row-start: 4;
+        }
         img {
             width: 100%;
             height: 100%;
@@ -89,9 +111,25 @@ useAnimateOnScroll('.fade-in-on-scroll');
         justify-content: center;
         align-items: center;
         background-color: var(--highlight-color-3);
+
         img {
             width: 100px;
             height: 100px;
+        }
+
+        @include v.media('1050px') {
+            grid-column: span 2 / span 2;
+            grid-row: span 1 / span 1;
+            grid-column-start: 1;
+            grid-row-start: 6;
+        }
+
+        @include v.media('700px') {
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
         }
     }
 
@@ -102,6 +140,13 @@ useAnimateOnScroll('.fade-in-on-scroll');
         grid-row-start: 5;
 
         background-color: var(--highlight-color-2);
+
+        @include v.media('1050px') {
+            grid-column: span 4 / span 4;
+            grid-row: span 1 / span 1;
+            grid-column-start: 3;
+            grid-row-start: 6;
+        }
     }
 
     .color-2 {
@@ -110,6 +155,13 @@ useAnimateOnScroll('.fade-in-on-scroll');
         grid-row-start: 1;
 
         background-color: var(--highlight-color);
+
+        @include v.media('1050px') {
+            grid-column: span 2 / span 2;
+            grid-row: span 2 / span 2;
+            grid-column-start: 5;
+            grid-row-start: 4;
+        }
     }
 }
 
