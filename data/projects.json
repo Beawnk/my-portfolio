@@ -47,7 +47,7 @@
   {
     "id": 6,
     "title": "IEmergency App",
-    "description": "Um web app de segurança pública feito para meu Trabalho de Conclusão de Curso (TCC). A plataforma permite que usuários façam denúncias geolocalizadas...",
+    "description": "Um web app de segurança pública feito para meu Trabalho de Conclusão de Curso (TCC). A plataforma permite que usuários façam denúncias geolocalizadas de ocorrências como violência doméstica, acidentes e incêndios, encaminhando as informações para as autoridades competentes. O aplicativo também notifica outros usuários próximos ao local do incidente, criando uma rede de alerta comunitário. Um botão de emergência envia a localização e uma mensagem opcional para a polícia ou contatos de emergência. O projeto foi construído com Vue.js, SASS para estilização e Supabase para autenticação e gerenciamento de banco de dados.",
     "tech": "Vue.js, SASS, Supabase",
     "imageUrl": "/images/projects/webapp.png",
     "projectUrl": "https://iemergency-webapp-py29.vercel.app/",
