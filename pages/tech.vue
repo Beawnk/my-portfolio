@@ -27,12 +27,18 @@ useAnimateOnScroll('.fade-in-on-scroll');
 </script>
 
 <style lang="scss" scoped>
+@use '@/assets/style/main.scss' as v;
+
 #tech {
 
     h3 {
         margin-bottom: 50px;
         text-align: center;
         color: var(--highlight-color-3);
+
+        @include v.media('700px') {
+            margin-bottom: 30px;
+        }
     }
 
     .tech-grid {
@@ -41,6 +47,16 @@ useAnimateOnScroll('.fade-in-on-scroll');
         grid-template-rows: repeat(2, auto);
         gap: 30px;
         align-items: center;
+
+        @include v.media('1050px') {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            align-items: center;
+        }
+
+        @include v.media('700px') {
+            gap: 20px;
+        }
 
         .tech-card {
             display: flex;
@@ -58,6 +74,11 @@ useAnimateOnScroll('.fade-in-on-scroll');
                 width: 150px;
                 height: 150px;
                 margin-bottom: 30px;
+
+                @include v.media('700px') {
+                    width: 80px;
+                    height: 80px;
+                }
 
                 img {
                     max-width: 100%;
