@@ -78,6 +78,8 @@ useAnimateOnScroll('.fade-in-on-scroll');
 </script>
 
 <style lang="scss" scoped>
+@use '@/assets/style/main.scss' as v;
+
 #about {
     h3 {
         margin-bottom: 50px;
@@ -91,6 +93,16 @@ useAnimateOnScroll('.fade-in-on-scroll');
         gap: 50px;
         align-items: stretch;
         margin-bottom: 80px;
+
+        @include v.media('1200px') {
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        @include v.media('1050px') {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     .card {
@@ -101,9 +113,17 @@ useAnimateOnScroll('.fade-in-on-scroll');
         color: var(--text-color);
         font-size: var(--text-medium);
         line-height: 1.6;
+
+        @include v.media('1200px') {
+            padding: 30px;
+        }
         
         &:not(.grid .card) {
             margin-bottom: 50px;
+
+            @include v.media('1200px') {
+                margin-bottom: 30px;
+            }
         }
 
         p {
@@ -130,8 +150,13 @@ useAnimateOnScroll('.fade-in-on-scroll');
             object-fit: cover;
         }
     }
-        .timeline {
+
+    .timeline {
         margin-top: 50px;
+
+        @include v.media('700px') {
+            margin-top: 30px;
+        }
     }
 
     .timeline-container {
@@ -140,7 +165,6 @@ useAnimateOnScroll('.fade-in-on-scroll');
         margin: 0 auto;
         padding: 40px 0;
 
-        /* A linha vertical central */
         &::after {
             content: '';
             position: absolute;
@@ -151,6 +175,7 @@ useAnimateOnScroll('.fade-in-on-scroll');
             bottom: 0;
             left: 50%;
             margin-left: -1.5px;
+            z-index: 1;
         }
     }
 
@@ -158,8 +183,14 @@ useAnimateOnScroll('.fade-in-on-scroll');
         padding: 10px 0;
         position: relative;
         width: 50%;
+        z-index: 2;
+
+        @include v.media('1050px') {
+            width: 100%;
+            padding: 20px 0;
+            
+        }
         
-        /* O ponto (círculo) na linha */
         &::after {
             content: '';
             position: absolute;
@@ -170,6 +201,10 @@ useAnimateOnScroll('.fade-in-on-scroll');
             top: 25px;
             border-radius: 50%;
             z-index: 1;
+
+            @include v.media('1050px') {
+                display: none;
+            }
         }
     }
 
@@ -178,6 +213,13 @@ useAnimateOnScroll('.fade-in-on-scroll');
         left: 0;
         padding-right: 40px;
         text-align: right;
+
+        @include v.media('1050px') {
+            left: 50%;
+            transform: translateX(-50%);
+            padding-right: 0;
+            text-align: center;
+        }
     }
 
     /* Item à direita */
@@ -188,6 +230,13 @@ useAnimateOnScroll('.fade-in-on-scroll');
         &::after {
             left: -8px;
         }
+
+        @include v.media('1050px') {
+            left: 50%;
+            transform: translateX(-50%);
+            padding-left: 0;
+            text-align: center;
+        }
     }
 
     .timeline-content {
@@ -195,6 +244,7 @@ useAnimateOnScroll('.fade-in-on-scroll');
         background-color: var(--dark-color);
         border-radius: var(--border-radius);
         position: relative;
+        z-index: 2;
 
         h4 {
             color: var(--highlight-color-3);

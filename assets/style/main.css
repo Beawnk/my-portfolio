@@ -13,7 +13,7 @@
     --highlight-color-3: #F8C8DC;
     --highlight-color-4: #D1F4E1;
     --highlight-color-5: #E6DAF7;
-    --dark-color: rgba(255, 255, 255, 0.05);
+    --dark-color: #252525;
 
     /* fonts */
     --font-family-regular: 'Inter-Regular';
@@ -238,7 +238,6 @@ table {
         --text-tiny: 14px;
 
         --side: 60px;
-        --top: 60px;
         --section: 30px;
         --title-margin: 20px;
     }
@@ -260,7 +259,6 @@ table {
         --text-tiny: 10px;
 
         --side: 40px;
-        --top: 40px;
         --section: 20px;
         --title-margin: 20px;
     }
