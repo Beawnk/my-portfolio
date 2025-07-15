@@ -54,12 +54,18 @@ useAnimateOnScroll('.fade-in-on-scroll');
 </script>
 
 <style lang="scss" scoped>
+@use '@/assets/style/main.scss' as v;
+
 #contact {
 
     h3 {
         margin-bottom: 50px;
         text-align: center;
         color: var(--highlight-color-5);
+
+        @include v.media('700px') {
+            margin-bottom: 30px;
+        }
     }
 
     .contact-grid {
@@ -68,16 +74,33 @@ useAnimateOnScroll('.fade-in-on-scroll');
         grid-template-rows: repeat(6, 1fr);
         gap: 25px;
 
+        @include v.media('1050px') {
+            display: flex;
+            flex-direction: column;
+        }
+
         .card {
             background-color: var(--dark-color);
             padding: 50px;
             border-radius: var(--border-radius);
+
+            @include v.media('500px') {
+                padding: 30px;
+            }
         }
 
         .contact-links {
             padding: 100px;
             grid-column: span 3 / span 3;
             grid-row: span 6 / span 6;
+
+            @include v.media('700px') {
+                padding: 80px;
+            }
+
+            @include v.media('500px') {
+                padding: 50px;
+            }
 
             h5 {
                 color: var(--text-color);

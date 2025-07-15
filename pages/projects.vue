@@ -34,6 +34,8 @@ useAnimateOnScroll('.fade-in-on-scroll');
 </script>
 
 <style lang="scss" scoped>
+@use '@/assets/style/main.scss' as v;
+
 .fade-in-on-scroll.project-card {
   opacity: 0;
   transform: translateX(20px);
@@ -67,6 +69,10 @@ useAnimateOnScroll('.fade-in-on-scroll');
         grid-template-columns: repeat(6, minmax(0, 1fr));
         grid-template-rows: repeat(4, 1fr);
         gap: 40px;
+
+        @include v.media('1480px') {
+            gap: 30px;
+        }
 
         .project-card {
             display: block;
