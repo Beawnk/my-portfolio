@@ -72,6 +72,8 @@ useAnimateOnScroll('.fade-in-on-scroll');
 
         @include v.media('1480px') {
             gap: 30px;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            grid-template-rows: repeat(8, minmax(0, 300px));
         }
 
         .project-card {
@@ -148,6 +150,10 @@ useAnimateOnScroll('.fade-in-on-scroll');
 
                 .project-image {
                     height: 600px;
+
+                    @include v.media('1480px') {
+                        height: 280px;
+                    }
                 }
             }
 
@@ -160,6 +166,14 @@ useAnimateOnScroll('.fade-in-on-scroll');
 
                 &:hover {
                     background-color: var(--highlight-color-4);
+                }
+
+                @include v.media('1480px') {
+                    grid-area: 3 / 3 / 5 / 5;
+
+                    .project-image {
+                        height: 280px;
+                    }
                 }
             }
 
@@ -209,6 +223,27 @@ useAnimateOnScroll('.fade-in-on-scroll');
                 &:hover {
                     background-color: var(--highlight-color);
                 }
+
+                @include v.media('1480px') {
+                    grid-area: 3 / 1 / 4 / 3;
+
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row-reverse;
+
+                    .project-image {
+                        margin: 30px;
+                        margin-left: 0;
+                        border-radius: 20px;
+                        width: 150px;
+                        height: 150px;
+                        overflow: hidden;
+                    }
+
+                    .project-info {
+                        width: calc(100% - 180px);
+                    }
+                }
             }
 
             &.six {
@@ -220,6 +255,10 @@ useAnimateOnScroll('.fade-in-on-scroll');
 
                 &:hover {
                     background-color: var(--highlight-color-5);
+                }
+
+                @include v.media('1480px') {
+                    grid-area: 1 / 1 / span 2 / span 2;
                 }
             }
         }
