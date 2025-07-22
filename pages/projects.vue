@@ -76,6 +76,12 @@ useAnimateOnScroll('.fade-in-on-scroll');
             grid-template-rows: repeat(8, minmax(0, 300px));
         }
 
+        @include v.media('1051px') {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         .project-card {
             display: block;
             border-radius: var(--border-radius);
@@ -89,6 +95,10 @@ useAnimateOnScroll('.fade-in-on-scroll');
                 h4, p, .tech {
                     color: var(--background-color) !important;
                 }
+            }
+
+            @include v.media('1480px') {
+                width: 100%;
             }
             
             .project-image img {
@@ -117,6 +127,10 @@ useAnimateOnScroll('.fade-in-on-scroll');
                     line-height: normal;
                     transition: var(--transition);
                 }
+
+                @include v.media('1051px') {
+                    padding: 20px;
+                }
             }
 
             &.type-1 {
@@ -137,12 +151,40 @@ useAnimateOnScroll('.fade-in-on-scroll');
                 .project-info {
                     width: calc(100% - 180px);
                 }
+
+                @include v.media('1051px') {
+                    display: block;
+
+                    .project-image {
+                        width: 100%;
+                        height: 30vh;
+                        margin: 0;
+                        border-radius: 0;
+                    }
+
+                    .project-info {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
             }
 
             &.type-3 {
 
                 .project-image {
                     height: 400px;
+                }
+
+                @include v.media('1051px') {
+
+                    .project-image {
+                        height: 30vh;
+                        border-radius: 0;
+                    }
+
+                    .project-info {
+                        text-align: center;
+                    }
                 }
             }
 
@@ -153,6 +195,21 @@ useAnimateOnScroll('.fade-in-on-scroll');
 
                     @include v.media('1480px') {
                         height: 280px;
+                    }
+
+                    @include v.media('1051px') {
+                        height: 30vh;
+                    }
+                }
+
+                @include v.media('1051px') {
+
+                    .project-image {
+                        height: 30vh;
+                    }
+
+                    .project-info {
+                        text-align: center;
                     }
                 }
             }
@@ -170,10 +227,6 @@ useAnimateOnScroll('.fade-in-on-scroll');
 
                 @include v.media('1480px') {
                     grid-area: 3 / 3 / 5 / 5;
-
-                    .project-image {
-                        height: 280px;
-                    }
                 }
             }
 
@@ -242,6 +295,23 @@ useAnimateOnScroll('.fade-in-on-scroll');
 
                     .project-info {
                         width: calc(100% - 180px);
+                    }
+                }
+
+                @include v.media('1051px') {
+                    display: block;
+
+                    .project-image {
+                        height: 30vh;
+                        border-radius: 0;
+                        width: 100%;
+                        margin: 0;
+                    }
+
+                    .project-info {
+                        text-align: center;
+                        width: 100%;
+                        
                     }
                 }
             }
