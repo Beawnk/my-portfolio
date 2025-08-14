@@ -13,7 +13,7 @@
     </div>
     <div class="grid">
         <div class="photo fade-in-on-scroll" style="--animation-delay: 0.3s;">
-            <img src="/assets/images/perfil.jpg" alt="">
+            <img src="/assets/images/perfil2.jpg" alt="">
         </div>
         <div class="card fade-in-on-scroll" style="--animation-delay: 0.4s;">
             <p>
