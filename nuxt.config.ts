@@ -5,4 +5,7 @@ export default defineNuxtConfig({
   css: [
     '@/assets/style/main.css', // or .css
   ],
+  modules: [
+    '@vueuse/nuxt',
+  ],
 })
