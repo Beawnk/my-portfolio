@@ -5,7 +5,7 @@
     </div>
     <div class="card fade-in-on-scroll" style="--animation-delay: 0.2s;">
         <p>
-            Oi! Me chamo <strong>Bianca Sineleck</strong>, tenho 24 anos e sou desenvolvedora Front-End morando em Porto Alegre (RS). Apesar de estar no sul do Brasil, trabalho tranquilamente de forma remota, colaborando com pessoas e projetos de diferentes lugares.
+            Oi! Me chamo <strong>Bianca Sineleck</strong>, tenho 24 anos e sou desenvolvedora Front-End morando em Viamão (RS). Apesar de estar no sul do Brasil, trabalho tranquilamente de forma remota, colaborando com pessoas e projetos de diferentes lugares.
         </p>
         <p>
             Sou apaixonada por tecnologia e sempre busco aprender algo novo. Me preocupo bastante com usabilidade, performance e escrever um código limpo e bem estruturado. Tenho experiência com sites de estilos variados, desde blogs e portfólios pessoais até sistemas mais complexos, como plataformas de e-commerce, e sempre tudo responsivo e acessível.
